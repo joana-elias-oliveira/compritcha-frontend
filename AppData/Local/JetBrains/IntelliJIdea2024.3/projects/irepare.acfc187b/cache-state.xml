@@ -1,0 +1,32 @@
+<project version="4">
+  <component name="ExternalSystemProjectTracker"><![CDATA[{
+  "projectData": {
+    "MAVEN": {
+      "IRepare": {
+        "settingsTracker": {
+          "isDirty": false,
+          "settingsFiles": {
+            "C:/Users/joana/Documents/IRepare/IRepare/pom.xml": 858771544
+          }
+        }
+      }
+    }
+  }
+}]]></component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProcessedFilesStorage">
+    <timestamps>
+      <entry key="11c1e21f91864132c840020f2a2566e2" value="1732556357349" />
+      <entry key="a5058fc94ca500ee5c0163cf22277780" value="1732556567859" />
+    </timestamps>
+  </component>
+  <component name="ProjectDependenciesModelState">
+    <option name="PROJECT_STATE" value="[{&quot;type&quot;:&quot;maven&quot;,&quot;namespace&quot;:&quot;jakarta.servlet&quot;,&quot;name&quot;:&quot;jakarta.servlet-api&quot;,&quot;version&quot;:{&quot;value&quot;:&quot;6.0.0&quot;,&quot;releaseDate&quot;:null},&quot;qualifiers&quot;:null,&quot;subpath&quot;:null,&quot;releaseDate&quot;:null,&quot;coordinates&quot;:&quot;maven:jakarta.servlet:jakarta.servlet-api:6.0.0:null:null&quot;,&quot;searchCoordinates&quot;:&quot;jakarta.servlet:jakarta.servlet-api:6.0.0&quot;,&quot;searchKey&quot;:&quot;8b1c68cf1effdce8a80de9d681ba3e7dbe663750153044297a81ef273929c4b1&quot;,&quot;humanReadableCoordinates&quot;:&quot;maven:jakarta.servlet:jakarta.servlet-api:6.0.0&quot;},{&quot;type&quot;:&quot;maven&quot;,&quot;namespace&quot;:&quot;jakarta.servlet.jsp.jstl&quot;,&quot;name&quot;:&quot;jakarta.servlet.jsp.jstl-api&quot;,&quot;version&quot;:{&quot;value&quot;:&quot;3.0.0&quot;,&quot;releaseDate&quot;:null},&quot;qualifiers&quot;:null,&quot;subpath&quot;:null,&quot;releaseDate&quot;:null,&quot;coordinates&quot;:&quot;maven:jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0:null:null&quot;,&quot;searchCoordinates&quot;:&quot;jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0&quot;,&quot;searchKey&quot;:&quot;a61c123fa9ac7c2b3945171654a4e598c99bc656e51c7b7d837f57e417e8b532&quot;,&quot;humanReadableCoordinates&quot;:&quot;maven:jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0&quot;},{&quot;type&quot;:&quot;maven&quot;,&quot;namespace&quot;:&quot;jakarta.el&quot;,&quot;name&quot;:&quot;jakarta.el-api&quot;,&quot;version&quot;:{&quot;value&quot;:&quot;5.0.0&quot;,&quot;releaseDate&quot;:null},&quot;qualifiers&quot;:null,&quot;subpath&quot;:null,&quot;releaseDate&quot;:null,&quot;coordinates&quot;:&quot;maven:jakarta.el:jakarta.el-api:5.0.0:null:null&quot;,&quot;searchCoordinates&quot;:&quot;jakarta.el:jakarta.el-api:5.0.0&quot;,&quot;searchKey&quot;:&quot;dff3896e49b75bbe616e4af24ad305019501e9a8f7c120290ede58e98d3db8d1&quot;,&quot;humanReadableCoordinates&quot;:&quot;maven:jakarta.el:jakarta.el-api:5.0.0&quot;},{&quot;type&quot;:&quot;maven&quot;,&quot;namespace&quot;:&quot;org.glassfish.web&quot;,&quot;name&quot;:&quot;jakarta.servlet.jsp.jstl&quot;,&quot;version&quot;:{&quot;value&quot;:&quot;3.0.1&quot;,&quot;releaseDate&quot;:null},&quot;qualifiers&quot;:null,&quot;subpath&quot;:null,&quot;releaseDate&quot;:null,&quot;coordinates&quot;:&quot;maven:org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1:null:null&quot;,&quot;searchCoordinates&quot;:&quot;org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1&quot;,&quot;searchKey&quot;:&quot;9224eb5641e8d3b61491bb524327b9e507f38fbfa545d736851fe880c3f43cc0&quot;,&quot;humanReadableCoordinates&quot;:&quot;maven:org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1&quot;},{&quot;type&quot;:&quot;maven&quot;,&quot;namespace&quot;:&quot;com.google.code.gson&quot;,&quot;name&quot;:&quot;gson&quot;,&quot;version&quot;:{&quot;value&quot;:&quot;2.10.1&quot;,&quot;releaseDate&quot;:null},&quot;qualifiers&quot;:null,&quot;subpath&quot;:null,&quot;releaseDate&quot;:null,&quot;coordinates&quot;:&quot;maven:com.google.code.gson:gson:2.10.1:null:null&quot;,&quot;searchCoordinates&quot;:&quot;com.google.code.gson:gson:2.10.1&quot;,&quot;searchKey&quot;:&quot;e834aea547bc4003326c4710adb04a0a4cc8716d2db27d8dff72c9e75c03da15&quot;,&quot;humanReadableCoordinates&quot;:&quot;maven:com.google.code.gson:gson:2.10.1&quot;},{&quot;type&quot;:&quot;maven&quot;,&quot;namespace&quot;:&quot;com.mysql&quot;,&quot;name&quot;:&quot;mysql-connector-j&quot;,&quot;version&quot;:{&quot;value&quot;:&quot;8.0.31&quot;,&quot;releaseDate&quot;:null},&quot;qualifiers&quot;:null,&quot;subpath&quot;:null,&quot;releaseDate&quot;:null,&quot;coordinates&quot;:&quot;maven:com.mysql:mysql-connector-j:8.0.31:null:null&quot;,&quot;searchCoordinates&quot;:&quot;com.mysql:mysql-connector-j:8.0.31&quot;,&quot;searchKey&quot;:&quot;95ccdc26d9b363df8145f39598755e5719f9668e574a0172cf09872d0bd7b4d0&quot;,&quot;humanReadableCoordinates&quot;:&quot;maven:com.mysql:mysql-connector-j:8.0.31&quot;},{&quot;type&quot;:&quot;maven&quot;,&quot;namespace&quot;:&quot;com.google.protobuf&quot;,&quot;name&quot;:&quot;protobuf-java&quot;,&quot;version&quot;:{&quot;value&quot;:&quot;3.19.4&quot;,&quot;releaseDate&quot;:null},&quot;qualifiers&quot;:null,&quot;subpath&quot;:null,&quot;releaseDate&quot;:null,&quot;coordinates&quot;:&quot;maven:com.google.protobuf:protobuf-java:3.19.4:null:null&quot;,&quot;searchCoordinates&quot;:&quot;com.google.protobuf:protobuf-java:3.19.4&quot;,&quot;searchKey&quot;:&quot;6fcde843e8b4d278b243bb497f1f39fa2b98f07e6315a247aabd27c1ceb82d70&quot;,&quot;humanReadableCoordinates&quot;:&quot;maven:com.google.protobuf:protobuf-java:3.19.4&quot;}]" />
+  </component>
+  <component name="RestoreUpdateTree"><![CDATA[{}]]></component>
+</project>
