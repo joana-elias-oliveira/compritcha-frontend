@@ -1,6 +1,15 @@
 {
-  "version": 3,
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist/compritcha/browser",
-  "framework": "angular"
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "outputDirectory": "dist/compritcha/browser"
 }
