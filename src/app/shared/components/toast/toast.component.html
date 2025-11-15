@@ -1,0 +1,10 @@
+<div class="custom-toast" [ngClass]="type">
+  <div class="toast-header">
+    <mat-icon class="toast-icon">{{ iconName }}</mat-icon>
+    <span class="toast-title">{{ title }}</span>
+    <button class="close-btn" mat-icon-button (click)="destroy()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div class="toast-message">{{ message }}</div>
+</div>

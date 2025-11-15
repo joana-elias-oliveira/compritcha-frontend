@@ -1,0 +1,39 @@
+<svg width="1728" height="1117" viewBox="0 0 1728 1117" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_2036_2)">
+<rect width="1728" height="1117" fill="#FBFBFB"/>
+<mask id="mask0_2036_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-361" y="-266" width="2224" height="1490">
+<path d="M-361 -266H1863V1224H-361V-266Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_2036_2)">
+<mask id="mask1_2036_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-361" y="-267" width="1727" height="1159">
+<path d="M-361 -266H1365.31V891.408H-361V-266Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_2036_2)">
+<g opacity="0.300003">
+<path d="M626.243 434.736C906.453 345.339 1173.32 238.066 1286.74 32.4579C1339.3 -64.8985 1346.02 -167.053 1365.31 -266H909.732C531.162 -95.4792 27.3686 -27.6217 -361 119.301V891.408C-311.382 842.852 -255.297 798.552 -201.041 761.031C19.122 609.06 346.032 524.133 626.243 434.736Z" fill="#AD9CEF"/>
+</g>
+</g>
+<mask id="mask2_2036_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-361" y="-266" width="2225" height="1490">
+<path d="M-361 -266H1863V1224H-361V-266Z" fill="white"/>
+</mask>
+<g mask="url(#mask2_2036_2)">
+<g opacity="0.399994">
+<path d="M1365.31 -266C1346.02 -167.052 1339.3 -64.8981 1286.74 32.4583C1173.32 238.066 906.454 345.34 626.244 434.737C346.033 524.133 19.1226 609.06 -201.04 761.031C-255.301 798.552 -311.382 842.853 -360.999 891.409V1224H791.447C739.845 1121.48 718.09 1014.64 753.007 890.655C813.051 676.104 1086.59 555.423 1360.13 461.554C1527.4 402.222 1716.4 345.286 1863.01 260.341V-266H1365.31Z" fill="#8D67DE"/>
+</g>
+</g>
+<mask id="mask3_2036_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="735" y="260" width="1129" height="964">
+<path d="M735.988 260.344H1863V1224H735.988V260.344Z" fill="white"/>
+</mask>
+<g mask="url(#mask3_2036_2)">
+<g opacity="0.300003">
+<path d="M753.007 890.654C718.09 1014.64 739.845 1121.48 791.451 1224H1863.01V260.344C1716.4 345.285 1527.41 402.224 1360.13 461.556C1086.59 555.423 813.051 676.103 753.007 890.654Z" fill="#AD9CEF"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_2036_2">
+<rect width="1728" height="1117" fill="white"/>
+</clipPath>
+</defs>
+</svg>

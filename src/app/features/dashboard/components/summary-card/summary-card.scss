@@ -1,0 +1,123 @@
+.summary-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 40px;
+  padding: 0.9rem 3.9rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  margin: 0 auto;
+  gap: 2rem;
+  height: 60px;
+
+  .summary-section {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+
+    &.left {
+      flex: 1;
+      justify-content: flex-start;
+    }
+
+    &.right {
+      flex: 1;
+      justify-content: flex-start;
+    }
+  }
+
+  .summary-icon {
+    font-size: 1.8rem;
+
+    &.dark {
+      color: #1f1f1f;
+    }
+  }
+
+  .summary-text {
+    display: flex;
+    flex-direction: column;
+
+    strong {
+      color: #111;
+      font-size: 1.5rem;
+      font-weight: 700;
+      font-family: 'Baloo 2', sans-serif;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 0;
+      font-family: 'Baloo 2', sans-serif;
+      font-size: 1.2rem;
+      color: #6b6b6b;
+    }
+  }
+
+  .divider {
+    width: 1px;
+    height: 70px;
+    background-color: #ddd;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 0.8rem 2.5rem;
+    gap: 1.5rem;
+    height: 70px;
+
+    .summary-text strong {
+      font-size: 1.4rem;
+    }
+
+    .summary-text p {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.5rem 1.2rem;
+    height: auto;
+
+    .divider {
+      width: 80%;
+      height: 1px;
+    }
+
+    .summary-section {
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+
+    .summary-text strong {
+      font-size: 1.3rem;
+    }
+
+    .summary-text p {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    border-radius: 30px;
+    padding: 1.2rem 1rem;
+    gap: 0.8rem;
+
+    .summary-icon {
+      font-size: 1.5rem;
+    }
+
+    .summary-text strong {
+      font-size: 1.2rem;
+    }
+
+    .summary-text p {
+      font-size: 0.95rem;
+    }
+  }
+}

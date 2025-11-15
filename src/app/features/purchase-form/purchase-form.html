@@ -1,0 +1,79 @@
+<div class="purchase-form-container">
+  <div class="form-card">
+    <h1>{{ purchase ? 'Editar Compra' : 'Criar Compra' }}</h1>
+
+    <div class="form-grid">
+      <div class="form-group">
+        <label>Descrição:</label>
+        <input
+          type="text"
+          [(ngModel)]="description"
+          placeholder="Insira a descrição da compra"
+          required
+          #desc="ngModel"
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Status:</label>
+        <select
+          [(ngModel)]="status"
+          required
+          #stat="ngModel">
+          <option value="" disabled selected>Selecione o status</option>
+          <option value="PENDING">Pendente</option>
+          <option value="COMPLETED">Aprovado</option>
+          <option value="REJECTED">Rejeitado</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group full">
+      <label>Itens:</label>
+
+      <div class="item-row" *ngFor="let item of items; let i = index">
+        <input
+          type="text"
+          [(ngModel)]="item.description"
+          placeholder="Nome do produto"
+          required
+        />
+
+        <div class="input-wrapper">
+          <small class="helper-text">Valor estimado do item</small>
+          <input
+            type="number"
+            [(ngModel)]="item.value"
+            min="0.01"
+            step="0.01"
+            required
+          />
+          <span class="fake-placeholder" *ngIf="!item.value"></span>
+        </div>
+
+        <button type="button" class="remove" (click)="removeItem(i)">✕</button>
+      </div>
+
+      <button type="button" class="add" (click)="addItem()">+ Adicionar novo item</button>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="total">
+      <span>Total estimado:</span>
+      <strong>R$ {{ total.toFixed(2) }}</strong>
+    </div>
+
+    <div class="actions">
+      <button type="button" class="cancel" (click)="cancel.emit()">Cancelar</button>
+
+      <button
+        type="button"
+        class="save"
+        (click)="onSave()"
+        [disabled]="!isFormValid()">
+        {{ purchase ? 'Salvar Alterações' : 'Salvar Compra' }}
+      </button>
+    </div>
+  </div>
+</div>

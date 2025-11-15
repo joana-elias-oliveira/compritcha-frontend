@@ -1,0 +1,23 @@
+<div class="summary-card">
+  <div class="summary-section left">
+    <div class="summary-icon" [style.color]="color">
+      <fa-icon [icon]="icon"></fa-icon>
+    </div>
+    <div class="summary-text">
+      <strong>{{ title }}</strong>
+      <p>{{ value }}</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="summary-section right">
+    <div class="summary-icon dark">
+      <fa-icon [icon]="secondaryIcon"></fa-icon>
+    </div>
+    <div class="summary-text">
+      <strong>{{ secondaryTitle }}</strong>
+      <p>{{ secondaryValue }}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,134 @@
+<section class="purchases" [class.modal-open]="confirmTarget" [class.dropdown-open]="editingStatusId">
+  <div class="header-top">
+    <h1 class="title">Compras</h1>
+    <button class="btn primary new-purchase" (click)="onCreate()">+ Nova Compra</button>
+  </div>
+
+  <div class="filters">
+    <button class="filter all" [class.active]="activeFilter === 'ALL'" (click)="setFilter('ALL')">TUDO</button>
+    <button class="filter pending" [class.active]="activeFilter === 'PENDING'" (click)="setFilter('PENDING')">Pendente</button>
+    <button class="filter approved" [class.active]="activeFilter === 'COMPLETED'" (click)="setFilter('COMPLETED')">Aprovado</button>
+    <button class="filter rejected" [class.active]="activeFilter === 'REJECTED'" (click)="setFilter('REJECTED')">Rejeitado</button>
+  </div>
+
+  <div class="table-wrapper" *ngIf="!loading; else loadingTpl">
+    <table class="purchases-table">
+      <thead [style.background-color]="getHeaderColor()">
+        <tr>
+          <th>Descrição</th>
+          <th>Status</th>
+          <th>Total</th>
+          <th class="actions-header">Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+      <ng-container *ngFor="let purchase of paginatedPurchases">
+        <tr [ngClass]="purchase.status.toLowerCase()">
+          <td>{{ purchase.description }}</td>
+          <td class="status-cell">
+            <div class="status-display" (click)="toggleEditStatus(purchase.id!, $event)">
+                <span class="status-label" [ngClass]="purchase.status.toLowerCase()">
+                  {{ getStatusLabel(purchase.status) }}
+                </span>
+            </div>
+
+            <div class="status-dropdown-global"
+              *ngIf="editingStatusId === purchase.id"
+              (click)="$event.stopPropagation()">
+              <button class="status-option pending" (click)="updateStatus(purchase, 'PENDING')">
+                Pendente
+              </button>
+              <button class="status-option approved" (click)="updateStatus(purchase, 'COMPLETED')">
+                Aprovado
+              </button>
+              <button class="status-option rejected" (click)="updateStatus(purchase, 'REJECTED')">
+                Rejeitado
+              </button>
+            </div>
+          </td>
+
+          <td>{{ +purchase.total! || 0 | currency:'BRL':'symbol':'1.2-2' }}</td>
+
+          <td class="actions">
+            <button (click)="toggleView(purchase.id!)" title="Ver Itens">
+              <fa-icon [icon]="['fas', expandedItemId === purchase.id ? 'chevron-up' : 'eye']"></fa-icon>
+            </button>
+            <button (click)="onEdit(purchase)" title="Editar">
+              <fa-icon [icon]="['fas', 'pen']"></fa-icon>
+            </button>
+            <button (click)="onDelete(purchase, $event)" title="Excluir" class="delete">
+              <fa-icon [icon]="['fas', 'trash']"></fa-icon>
+            </button>
+          </td>
+        </tr>
+
+        <tr *ngIf="expandedItemId === purchase.id" class="subitems-row" [ngClass]="purchase.status.toLowerCase()">
+          <td colspan="5">
+            <div class="subitems-container">
+              <h4 [ngClass]="purchase.status.toLowerCase()">Itens da Compra – {{ purchase.description }}</h4>
+              <div class="subitem-list">
+                <div class="subitem-card" *ngFor="let item of purchase.items">
+                  <div class="desc">{{ item.description }}</div>
+                  <div class="valor">
+                    {{ +item.value || 0 | currency:'BRL':'symbol':'1.2-2' }}
+                  </div>
+
+                  <div *ngIf="item.subitems?.length" class="subitem-group">
+                    <div class="subitem" *ngFor="let sub of item.subitems">
+                      <span class="desc">{{ sub.description }}</span>
+                      <span class="valor">
+                          {{ +sub.value || 0 | currency:'BRL':'symbol':'1.2-2' }}
+                        </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </ng-container>
+      </tbody>
+    </table>
+    <div class="pagination">
+      <button class="page-btn" (click)="prevPage()" [disabled]="page === 1">‹</button>
+      <button class="page-number"
+        *ngFor="let p of totalPagesArray"
+        [class.active]="p === page"
+        (click)="goToPage(p)">
+        {{ p }}
+      </button>
+      <button class="page-btn" (click)="nextPage()" [disabled]="page === totalPages">›</button>
+    </div>
+  </div>
+
+  <div class="export-wrapper">
+    <button class="btn export" (click)="exportToExcel()">
+      <fa-icon [icon]="['fas', 'file-excel']"></fa-icon>
+      Exportar para Excel
+    </button>
+  </div>
+  <ng-template #loadingTpl>
+    <div class="loading">Carregando compras...</div>
+  </ng-template>
+
+  <div *ngIf="confirmTarget" class="confirm-modal" role="dialog" aria-modal="true">
+    <div class="overlay" (click)="closeConfirm()"></div>
+    <div class="dialog">
+      <div class="icon-wrap">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
+          <path d="M12 9v4m0 4h.01M12 2a10 10 0 100 20 10 10 0 000-20z" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <h3>Excluir esta compra?</h3>
+      <p class="subtitle">
+        Tem certeza que deseja excluir <strong>{{ confirmTarget.description }}</strong>?<br />
+        Esta ação não pode ser desfeita.
+      </p>
+      <div class="actions">
+        <button type="button" class="btn ghost" (click)="closeConfirm()">Cancelar</button>
+        <button type="button" class="btn danger" (click)="confirmDelete()">Excluir</button>
+      </div>
+    </div>
+  </div>
+</section>

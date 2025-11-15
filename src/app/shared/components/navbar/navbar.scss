@@ -1,0 +1,167 @@
+nav.navbar {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #d6c7f7;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+  position: relative;
+}
+
+.navbar-inner {
+  max-width: 1200px;
+  height: 80px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.navbar-logo h1 {
+  color: #5b21b6;
+  font-size: 2rem;
+  font-family: 'Lobster Two', cursive;
+  margin: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+
+  li {
+    display: flex;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: #333;
+      font-family: 'Baloo 2', sans-serif;
+      font-size: 1.1rem;
+      transition: color 0.2s ease-in-out;
+
+      &.active,
+      &:hover {
+        color: #5b21b6;
+      }
+    }
+  }
+}
+
+.btn-nova-compra {
+  background-color: #6d28d9;
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  padding: 0.45rem 1.2rem;
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.15s ease-in-out;
+
+  &:hover {
+    background-color: #5b21b6;
+    transform: scale(1.05);
+  }
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #5b21b6;
+  cursor: pointer;
+  display: none;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar-inner {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-inner {
+    height: 70px;
+  }
+
+  .navbar-logo h1 {
+    font-size: 1.7rem;
+  }
+
+  .btn-icon {
+    display: block;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid #e5e5e5;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+
+    &.open {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    li a {
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .btn-nova-compra {
+      padding: 0.5rem 1.4rem;
+      font-size: 1rem;
+      border-radius: 20px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-inner {
+    padding: 0 1rem;
+  }
+
+  .navbar-logo h1 {
+    font-size: 1.5rem;
+  }
+
+  .navbar-links {
+    gap: 1.2rem;
+
+    li a {
+      font-size: 1.1rem;
+    }
+
+    .btn-nova-compra {
+      width: 85%;
+      text-align: center;
+    }
+  }
+}

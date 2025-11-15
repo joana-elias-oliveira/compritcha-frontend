@@ -1,0 +1,59 @@
+<section class="dashboard">
+  <div class="dashboard-bg">
+    <img
+      src="assets/svg/Clip path group.svg"
+      alt="Fundo curvado"
+      class="background-svg"
+    />
+  </div>
+
+  <div class="dashboard-content">
+    <div class="header">
+      <h1>Bem-vinda ao seu painel de compras</h1>
+      <p>Veja o status das suas compritchas e adicione novas com um clique!</p>
+    </div>
+
+    <div class="status-cards">
+      <a routerLink="/compras" class="card-link">
+        <app-status-card
+          color="#f9a8d4"
+          title="Pendente"
+          [count]="pendingCount"
+          subtitle="Pendente"
+          icon="clock">
+        </app-status-card>
+      </a>
+
+      <a routerLink="/compras" class="card-link">
+        <app-status-card
+          color="#99f6e4"
+          title="Aprovado"
+          [count]="completedCount"
+          subtitle="Aprovado"
+          icon="check-circle">
+        </app-status-card>
+      </a>
+
+      <a routerLink="/compras" class="card-link">
+        <app-status-card
+          color="#fdba74"
+          title="Rejeitado"
+          [count]="rejectedCount"
+          subtitle="Rejeitado"
+          icon="ban">
+        </app-status-card>
+      </a>
+    </div>
+
+
+    <app-summary-card
+      [icon]="['fas', 'money-bill-wave']"
+      color="#f59e0b"
+      title="Total em Compras"
+      [value]="(totalValue | currency:'BRL':'symbol':'1.2-2') || ''"
+      [secondaryIcon]="['fas', 'flask']"
+      secondaryTitle="Total de Itens"
+      [secondaryValue]="totalItems + ' itens'">
+    </app-summary-card>
+  </div>
+</section>

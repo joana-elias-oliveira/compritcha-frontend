@@ -1,0 +1,37 @@
+<nav class="navbar">
+  <div class="navbar-inner">
+    <div class="navbar-logo">
+      <h1 routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        Compritcha
+      </h1>
+    </div>
+
+    <button class="btn-icon" (click)="isMenuOpen = !isMenuOpen">
+      <fa-icon
+        [icon]="isMenuOpen ? faXmark : faBars"
+        size="lg"
+      ></fa-icon>
+    </button>
+
+    <ul class="navbar-links" [class.open]="isMenuOpen">
+      <li>
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          Início
+        </a>
+      </li>
+      <li>
+        <a routerLink="/compras" routerLinkActive="active">Compras</a>
+      </li>
+      <li>
+        <button class="btn-nova-compra" routerLink="/compras/nova">
+          Nova Compra
+        </button>
+      </li>
+<!--      <li>-->
+<!--        <button class="btn-icon">-->
+<!--          <fa-icon [icon]="faLanguage"></fa-icon>-->
+<!--        </button>-->
+<!--      </li>-->
+    </ul>
+  </div>
+</nav>

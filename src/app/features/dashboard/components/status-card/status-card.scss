@@ -1,0 +1,152 @@
+.status-card {
+  background-color: #ffffff;
+  width: 240px;
+  height: 250px;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  }
+
+  .card-header {
+    background-color: var(--card-color);
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 70px;
+    font-size: 1.15rem;
+
+    .card-icon {
+      font-size: 1.4rem;
+    }
+
+    .card-title {
+      font-family: 'Baloo 2', sans-serif;
+    }
+  }
+
+  .card-body {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0.5rem;
+
+    h2 {
+      font-size: 2.2rem;
+      color: #222;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    p {
+      color: #444;
+      margin: 0.4rem 0 0 0;
+      font-size: 1rem;
+      font-family: 'Baloo 2', sans-serif;
+    }
+  }
+
+  .card-footer {
+    border-top: 1px solid #e5e7eb;
+    padding: 0.75rem 0;
+    color: #777;
+    font-size: 0.85rem;
+    text-align: center;
+    text-transform: lowercase;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  @media (max-width: 1024px) {
+    width: 210px;
+    height: 230px;
+
+    .card-header {
+      height: 65px;
+      font-size: 1.05rem;
+
+      .card-icon {
+        font-size: 1.3rem;
+      }
+    }
+
+    .card-body h2 {
+      font-size: 2rem;
+    }
+
+    .card-body p {
+      font-size: 0.95rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 180px;
+    height: 210px;
+
+    .card-header {
+      height: 60px;
+      font-size: 1rem;
+
+      .card-icon {
+        font-size: 1.2rem;
+      }
+    }
+
+    .card-body h2 {
+      font-size: 1.8rem;
+    }
+
+    .card-body p {
+      font-size: 0.9rem;
+    }
+
+    .card-footer {
+      font-size: 0.8rem;
+      padding: 0.6rem 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 16px;
+    padding-bottom: 0.8rem;
+
+    .card-header {
+      height: 58px;
+      font-size: 0.95rem;
+
+      .card-icon {
+        font-size: 1.1rem;
+      }
+    }
+
+    .card-body {
+      padding: 1rem 0.5rem;
+
+      h2 {
+        font-size: 1.7rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+
+    .card-footer {
+      font-size: 0.75rem;
+    }
+  }
+}
